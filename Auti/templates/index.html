@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Auuti</title>
+</head>
+<body style="background-color:#021138">
+<h1> <p style="color:#f8f0f0";> Auti </p>   </h1>
+
+<table>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <div class="container h-100">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-sm-12 col-xs-12 pt-5">
+                <div class="card border-0 p-3 shadow-sm text-center">
+    <tr style="background-color: rgb(9, 3, 85) ;">
+        <td style="color: #e93305;">Time</td>
+        <td style="color: #fa3909;">Amount</td>
+        <td style="color: #fa3909;">Currency</td>
+        <td style="color: #fa3909;">Target_Currency</td>
+        <td style="color: #fa3909;">Rate</td>
+        <td style="color: #fa3909;">Conversion</td>
+    </tr>
+</div>
+</div>
+</div>
+</div>
+    {% for i in info %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <div class="container h-100">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-sm-12 col-xs-12 pt-5">
+                <div class="card border-0 p-3 shadow-sm text-center">
+        <tr style="background-color: rgb(3, 22, 109) ;">
+            <td style="color: #db3005;"> {{ i[0] }} </td>
+            <td style="color: #f74417;"> {{ i[1] }}</td>
+            <td style="color: #fa3909;"> {{ i[2] }} </td>
+            <td style="color: #fa3909;"> {{ i[3] }} </td>
+            <td style="color: #fa3909;"> {{ i[4] }} </td>
+            <td style="color: #fa3909;"> {{ i[5] }} </td>
+
+        </tr>
+    </div>
+</div>
+</div>
+</div>
+    {% endfor %}
+</table>
+</body>
+</html>

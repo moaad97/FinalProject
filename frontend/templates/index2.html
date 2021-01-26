@@ -1,0 +1,129 @@
+<html lang="en">
+  <head>
+    <title>Money Changer</title>
+  </head>
+  <body>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <div class="container h-100">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-sm-12 col-xs-12 pt-5">
+                <div class="card border-0 p-3 shadow-sm text-center">
+                    <div class="container">
+                        <div class="row">
+                            <h1 class="heading display-4 pb-7">currency swap</h1>
+                        <form action ={{ val }} id="currency-form" method="post">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-text">From</span>
+                                    <select class="selectpicker" name = "firstCurrency">
+                                     <option>ILS</option>
+                                     <option>USD</option>
+                                     <option>EUR</option>
+                                     <option>INR</option>
+                                     <option>KRW</option>
+                                     <option>MXN</option>
+                                     <option>MYR</option>
+                                     <option>NZD</option>
+                                     <option>PHP</option>
+                                     <option>SGD</option>
+                                     <option>THB</option>
+                                     <option>ZAR</option>
+                                     <option>JPY</option>
+                                     <option>BGN</option>
+                                     <option>CZK</option>
+                                     <option>DKK</option>
+                                     <option>GBP</option>
+                                     <option>HUF</option>
+                                     <option>PLN</option>
+                                     <option>RON</option>
+                                     <option>SEK</option>
+                                     <option>CHF</option>
+                                     <option>ISK</option>
+                                     <option>NOK</option>
+                                     <option>HRK</option>
+                                     <option>RUB</option>
+                                     <option>TRY</option>
+                                     <option>AUD</option>
+                                     <option>BRL</option>
+                                     <option>CAD</option>
+                                     <option>CNY</option>
+                                     <option>HKD</option>
+                                     <option>IDR</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-text">To</span>
+                                    <select class="selectpicker" name = "secondCurrency">
+                                        <option>ILS</option>
+                                        <option>USD</option>
+                                        <option>EUR</option>
+                                        <option>INR</option>
+                                        <option>KRW</option>
+                                        <option>MXN</option>
+                                        <option>MYR</option>
+                                        <option>NZD</option>
+                                        <option>PHP</option>
+                                        <option>SGD</option>
+                                        <option>THB</option>
+                                        <option>ZAR</option>
+                                        <option>JPY</option>
+                                        <option>BGN</option>
+                                        <option>CZK</option>
+                                        <option>DKK</option>
+                                        <option>GBP</option>
+                                        <option>HUF</option>
+                                        <option>PLN</option>
+                                        <option>RON</option>
+                                        <option>SEK</option>
+                                        <option>CHF</option>
+                                        <option>ISK</option>
+                                        <option>NOK</option>
+                                        <option>HRK</option>
+                                        <option>RUB</option>
+                                        <option>TRY</option>
+                                        <option>AUD</option>
+                                        <option>BRL</option>
+                                        <option>CAD</option>
+                                        <option>CNY</option>
+                                        <option>HKD</option>
+                                        <option>IDR</option>
+                                           </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="number" class="form-control" name = "amount" id = "amount" placeholder="currency" min="0" required>
+                            </div>
+                            <div class="form-group">
+                                <input id ="submitbtn" type="submit" value = "calculate" class = "btn btn-danger">
+                            </div>
+                        </form>
+                        {% if info %}
+                        <div id="results" class = "pt-4">
+                            <h5>Our Changer answer</h5>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-text">{{info.amount}} {{info.firstCurrency}} </span>
+                                    <div class="form-control" id="total">
+                                       {{info.result }} {{info.secondCurrency}}
+                                    </div>
+                                  </div>
+                            </div>
+                        </div>
+                        {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <center>
+            <form action = {{ val2 }} id="currency-form1" method="post">
+                <div class="form-group">
+                    <input id ="submitbtn1" type="submit" value = "Auti" class = "btn btn-danger">
+                </div>
+            </form>
+                </center>
+</body>
+</html>
